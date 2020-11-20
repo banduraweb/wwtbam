@@ -20,15 +20,14 @@ class QuestionService {
 
   static randomNewQuestionByLevel(list) {
     const index = Random.randomInteger(0, list.length - 1);
-    return this.clearIsCorrectAndShuffleAnswers(list[index]);
+    return this.shuffleAnswers(list[index]);
   }
 
-  static clearIsCorrectAndShuffleAnswers(question) {
+  static shuffleAnswers(question) {
     const result = {
       ...question.toObject(),
       answers: question.answers
-        .map(({ statics, _id, variant }) => ({
-          statics,
+        .map(({ _id, variant }) => ({
           _id,
           variant,
         }))
