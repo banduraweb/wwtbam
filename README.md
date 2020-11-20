@@ -1,5 +1,7 @@
 # wwtbam
-[DEMO](https://wwtba-m.netlify.app/)
+[DEMO](https://wwtba-m.netlify.app/) `netlify`
+
+[DEMO](https://banduraweb.github.io/wwclient/) `gh-pages`
 
 # BackEnd running on localhost:3001
 ##  Install dependencies:
