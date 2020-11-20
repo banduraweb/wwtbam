@@ -1,0 +1,50 @@
+@import "../../assets/styles/variables";
+
+
+.list {
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.order {
+  display: inline-block;
+  margin-right: 7px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 116%;
+  color: $orange;
+}
+
+.data {
+  display: inline-block;
+  font-weight: 600;
+  min-width: 60px;
+  font-size: 14px;
+}
+
+.chart {
+  display: inline-block;
+  height: 15px;
+}
+
+.chartRed {
+  background-color: $red100;
+
+}
+
+.chartGreen {
+  background-color: $green100;
+}
+
+.chartYellow {
+  background-color: $yellow;
+}
+
+.chartBlue {
+  background-color: $blue;
+}

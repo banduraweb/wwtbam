@@ -1,0 +1,77 @@
+@import "../../../assets/styles/variables";
+
+.startPage {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  background: linear-gradient(to bottom right, $white 50%, $pink 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startPageInit {
+  background: $black40;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentTitle {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 116%;
+  display: flex;
+  align-items: center;
+  max-width: 39rem;
+  color: $black;
+}
+
+
+.btnContainer {
+ margin-top: 4rem;
+}
+
+.totalScore {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 116%;
+  color: $black;
+  opacity: 0.5;
+}
+
+.earned {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 116%;
+  color: $black;
+}
+
+@media screen and (max-width: 1201px) {
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .gameInitedInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .earned {
+    text-align: center;
+  }
+}

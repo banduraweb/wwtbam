@@ -1,0 +1,20 @@
+@import "../../assets/styles/variables";
+
+.button {
+  height: 4rem;
+  width: 18.5rem;
+  background: $orange;
+  border-radius: 0.75rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 116%;
+  color: $white;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+  &:hover {
+    background: $orange80;
+  }
+}

@@ -1,0 +1,198 @@
+@import "../../../assets/styles/variables";
+
+.gameBoardContainer {
+  display: flex;
+  height: 100vh;
+  background-color: $black40;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.questionnaireWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  padding-left: 5rem;
+}
+
+.currentQuestion {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 116%;
+  color: $black;
+  max-width: 39rem;
+}
+
+.answersWrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 810px;
+  justify-content: center;
+  align-items: center;
+}
+
+.helpers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.helpBtn {
+  border-radius: 50%;
+  min-width: 80px;
+  min-height: 80px;
+  outline: none;
+  border: none;
+  background-color: $orange;
+  box-shadow: 0 0 0 3px $orange5;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 0 5px $green5;
+  }
+}
+
+
+.helpBtnNoHover {
+  border-radius: 50%;
+  min-width: 80px;
+  min-height: 80px;
+  outline: none;
+  border: none;
+  background-color: $orange;
+  box-shadow: 0 0 0 3px $orange5;
+}
+
+.statistics {
+  margin-left: 10px;
+}
+
+.used {
+  box-shadow: 0 0 0 3px $red100;
+  background-color: $white;
+}
+
+.winList {
+  width: 23.5rem;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.current {
+  color: $orange;
+}
+
+.scoreBlockItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  &::before {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: $black40;
+  }
+}
+
+.scoreBlockItemActive {
+  &::before {
+    background: $orange;
+  }
+}
+
+.scoreBlockItemMobile {
+  &::before {
+    background: $greyLight;
+  }
+}
+
+.content {
+  fill: $white;
+  stroke: $black;
+  z-index: 100;
+}
+
+.contentActive {
+  fill: $white;
+  stroke: $orange;
+}
+
+.passed {
+  fill: $white;
+  stroke: $black40;
+  color: $grey;
+}
+
+.guaranteed {
+  color: $blue;
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.mobBtn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 120;
+  outline: none;
+  border: none;
+  background-color: $black40;
+}
+
+.winListMobile {
+  width: 100%;
+  height: 100vh;
+  background-color: $black40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+}
+
+
+@media screen and (max-width: 992px) {
+  .mobBtn {
+    display: flex;
+  }
+  .winList {
+    display: none;
+  }
+  .questionnaireWrapper {
+    padding: 0 7px;
+  }
+}
+
+
+@media screen and (max-width: 464px) {
+  .currentQuestion {
+    max-width: 260px;
+  }
+
+  .helpBtn, .helpBtnNoHover {
+    border-radius: 3px;
+    min-height: fit-content;
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../assets/styles/variables";
+
+.answerBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  outline: none;
+  background-color: $black40;
+  padding: 0;
+  border: none;
+  &:hover .formSvg{
+    fill: $white;
+    stroke: $orange;
+  }
+}
+
+
+.answerBlockNoHover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  outline: none;
+  background-color: $black40;
+  padding: 0;
+  border: none;
+}
+
+.formSvg {
+  fill: $white;
+  stroke: $black;
+}
+
+.answerContent {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 44px;
+  font-size: 1.25rem;
+  line-height: 116%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.order {
+  display: inline-block;
+  float: left;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 116%;
+  color: $orange;
+}
+
+.variant {
+  padding-left: 0.5rem;
+}
+
+.selected {
+  fill: $orange;
+  stroke: $orange5;
+}
+
+.correct {
+  fill: $green5;
+  stroke: $green100;
+}
+
+.incorrect {
+  fill: $red5;
+  stroke: $red100;
+}
