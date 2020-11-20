@@ -48,10 +48,10 @@ const errors = handleActions(
       return payload;
     },
     [actions.clearCurrentQuestion.TRIGGER]() {
-      return {};
+      return null;
     },
   },
-  {},
+  null,
 );
 
 const currentQuestion = handleActions(
@@ -72,10 +72,10 @@ const errorsCheckAnswer = handleActions(
       return payload;
     },
     [actions.clearCheckedAnswer.TRIGGER]() {
-      return {};
+      return null;
     },
   },
-  {},
+  null,
 );
 
 const currentCheckedAnswer = handleActions(
@@ -108,10 +108,10 @@ const errorsFiftyFiftyAnswers = handleActions(
       return payload;
     },
     [actions.clearFiftyFiftyAnswers.TRIGGER]() {
-      return {};
+      return null;
     },
   },
-  {},
+  null,
 );
 
 const statisticsHelp = handleActions(
@@ -132,10 +132,10 @@ const errorsStatistics = handleActions(
       return payload;
     },
     [actions.clearStatistics.TRIGGER]() {
-      return {};
+      return null;
     },
   },
-  {},
+  null,
 );
 
 const question = combineReducers({

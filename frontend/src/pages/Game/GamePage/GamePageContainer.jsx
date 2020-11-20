@@ -25,6 +25,7 @@ const GamePageContainer = () => {
   const {
     data: fiftyFiftyAnswers,
     status: fiftyFiftyStatus,
+    errorsFiftyFiftyAnswers,
   } = useSelector(questionnaireSelectors.getFiftyFiftyAnswers);
 
   const {
@@ -33,11 +34,13 @@ const GamePageContainer = () => {
   const {
     status: checkedStatus,
     answer,
+    errorsCheckAnswer,
   } = useSelector(questionnaireSelectors.checkedAnswerResult);
 
   const {
     status: statisticsStatus,
     data: statisticsInfo,
+    errorsStatistics,
   } = useSelector(questionnaireSelectors.getStatistics);
 
   const toggle = () => setBurgerMenu(!burgerMenu);
@@ -147,6 +150,12 @@ const GamePageContainer = () => {
     return <Loader />;
   }
 
+  if ([errors, errorsFiftyFiftyAnswers, errorsCheckAnswer, errorsStatistics].some(Boolean)) {
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
+    return null;
+  }
   return (
     <div>
       <GamePage

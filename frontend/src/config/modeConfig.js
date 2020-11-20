@@ -1,4 +1,6 @@
-const prod = process.env.NODE_ENV === 'production';
-const API = prod ? '/game' : 'http://localhost:3001/game';
+const mode = 'production';
+const prod = mode === 'production';
+
+const API = prod ? 'https://lit-brook-76575.herokuapp.com/game' : 'http://localhost:3001/game';
 
 export default API;

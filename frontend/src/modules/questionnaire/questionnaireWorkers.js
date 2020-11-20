@@ -3,6 +3,7 @@ import {
 } from 'redux-saga/effects';
 import * as actions from './questionnaireActions';
 import QuestionnaireService from '../../services/questionnaire.service';
+import Notification from '../../services/notifier.service';
 
 function* fetchCurrentQuestion({ payload }) {
   try {
@@ -11,8 +12,8 @@ function* fetchCurrentQuestion({ payload }) {
     yield put(actions.saveCurrentQuestion(result));
     yield put(actions.pushCurrentQuestion.success());
   } catch (e) {
+    Notification.error('Something went wrong');
     yield put(actions.pushCurrentQuestion.failure(e));
-    yield put(actions.clearCurrentQuestion());
   }
 }
 
@@ -23,6 +24,7 @@ function* fetchCheckAnswer({ payload }) {
     yield put(actions.saveCheckedAnswer(result));
     yield put(actions.checkAnswer.success());
   } catch (e) {
+    Notification.error('Something went wrong');
     yield put(actions.checkAnswer.failure(e));
   }
 }
@@ -34,6 +36,7 @@ function* fetchFiftyFiftyAnswers({ payload }) {
     yield put(actions.saveFiftyFiftyAnswers(result));
     yield put(actions.pushFiftyFiftyAnswers.success());
   } catch (e) {
+    Notification.error('Something went wrong');
     yield put(actions.pushFiftyFiftyAnswers.failure(e));
   }
 }
@@ -45,6 +48,7 @@ function* fetchStatictics({ payload }) {
     yield put(actions.saveStatistics(result));
     yield put(actions.pushStatistics.success());
   } catch (e) {
+    Notification.error('Something went wrong');
     yield put(actions.pushStatistics.failure(e));
   }
 }
